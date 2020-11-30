@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_login"
+            android:icon="@drawable/login"
+            android:title="@string/login2" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_account_circle_black_24dp"
+            android:title="My Profile"/>
+        <item
+            android:id="@+id/nav_applications"
+            android:icon="@drawable/ic_content_paste_black_24dp"
+            android:title="My Applications"/>
+        <item
+            android:id="@+id/nav_aboutus"
+            android:icon="@drawable/aboutus"
+            android:title="@string/aboutus" />
+        <item
+            android:id="@+id/nav_aboutfounder"
+            android:icon="@drawable/ic_assignment_ind_black_24dp"
+            android:title="@string/aboutfounder" />
+        <item
+            android:id="@+id/nav_internship"
+            android:icon="@drawable/ic_assignment_turned_in_black_24dp"
+            android:title="@string/internship" />
+        <item android:title="Events"
+              android:icon="@drawable/ic_event"
+              android:id="@+id/nav_events"/>
+        <item
+            android:id="@+id/nav_donation"
+            android:icon="@drawable/ic_monetization_on_black_24dp"
+            android:title="@string/donation" />
+        <item
+            android:id="@+id/nav_locateus"
+            android:icon="@drawable/ic_location_on_black_24dp"
+            android:title="@string/locateus" />
+        <item
+            android:id="@+id/nav_contactus"
+            android:icon="@android:drawable/stat_sys_phone_call"
+            android:title="@string/contactus" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_power_settings_new_black_24dp"
+            android:title="Logout"/>
+    </group>
+
+</menu>

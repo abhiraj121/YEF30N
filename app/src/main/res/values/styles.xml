@@ -1,0 +1,96 @@
+<resources>
+
+    <!-- Base application theme. -->
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <!-- Customize your theme here. -->
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+
+    <style name="AppTheme.NoActionBar">
+
+        <item name="windowActionBar">false</item>
+
+        <item name="windowNoTitle">true</item>
+
+    </style>
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="right">
+
+        <item name="android:layout_width">wrap_content</item>
+
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:layout_gravity">right</item>
+
+        <item name="android:layout_marginRight">15dp</item>
+
+        <item name="android:clickable">true</item>
+
+    </style>
+
+
+    <style name="roundimageview" parent="">
+
+        <item name="cornerFamily">rounded</item>
+
+        <item name="cornerSize">15dp</item>
+
+        <item name="color">@color/white</item>
+
+    </style>
+
+
+    <style name="MyTabLayoutTextAppearance" parent="TextAppearance.Design.Tab">
+
+        <item name="android:textSize">13sp</item>
+
+        <item name="fontFamily">@font/rubik</item>
+
+    </style>
+
+    <style name="CustomDialog" parent="android:Theme.DeviceDefault.Dialog">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="DialogTitleAppearance">@android:style/TextAppearance.Medium</item>
+        <item name="DialogSpotColor">@android:color/white</item>
+        <item name="DialogSpotCount">4</item>
+    </style>
+
+<!--    <style name="AppTheme.ToolbarFont" parent="Widget.AppCompat.Toolbar">-->
+<!--        &lt;!&ndash;This line changes the color of text in Toolbar&ndash;&gt;-->
+<!--        <item name="android:textColorPrimary">@color/backgroundlogo</item>-->
+<!--        &lt;!&ndash;This line changes the color of icons in toolbar (back, overflow menu icons)&ndash;&gt;-->
+<!--        <item name="android:textColorSecondary">@android:color/holo_green_dark</item>-->
+<!--        <item name="textAllCaps">false</item>-->
+<!--        <item name="android:textSize">30sp</item>-->
+<!--        <item name="android:fontFamily">@font/rubik_medium</item>-->
+<!--    </style>-->
+
+<!--    <style name="Widget.Shrine.Toolbar" parent="Widget.AppCompat.Toolbar">-->
+<!--        <item name="android:background">?attr/colorAccent</item>-->
+<!--        <item name="android:theme">@style/Theme.Shrine</item>-->
+<!--        &lt;!&ndash;        <item name="android:theme">?theme</item>&ndash;&gt;-->
+<!--        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>-->
+<!--        <item name="titleTextAppearance">@style/TextAppearance.Shrine.Toolbar</item>-->
+<!--    </style>-->
+<!--    -->
+<!--    <style name="TextAppearance.Shrine.Toolbar" parent="TextAppearance.MaterialComponents.Button">-->
+<!--        <item name="android:textSize">16sp</item>-->
+<!--    </style>-->
+
+</resources>

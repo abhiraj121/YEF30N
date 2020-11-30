@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:id="@+id/toolbarMain"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="#ffffff"-->
+<!--        app:elevation="6dp">-->
+
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/app_bar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="?attr/actionBarSize"-->
+<!--            app:contentInsetStart="0dp"-->
+<!--            app:menu="@menu/toolbar_menu"-->
+<!--            app:navigationIcon="@drawable/back_internship_details"-->
+<!--            app:title="Internship Details"-->
+<!--            app:titleTextColor="#5A5A5A" />-->
+
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbarMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        app:elevation="0dp"
+        android:background="#ffffff">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:contentInsetStart="0dp"
+            app:menu="@menu/toolbar_menu"
+            app:navigationIcon="@drawable/back_internship_details"
+            app:title="Internship Details"
+            app:titleTextColor="#5A5A5A" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ScrollView
+        android:id="@+id/appliedInternshipDetailsScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:orientation="vertical"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/internship_details_bg"
+                        android:contentDescription="Organisation Name"
+                        android:padding="10dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/yef_logo" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/internship_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/rubik_medium"
+                            android:textColor="#000000"
+                            android:textSize="21sp" />
+
+                        <TextView
+                            android:id="@+id/internship_org"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik_medium"
+                            android:textColor="#7D7D7D" />
+
+                        <TextView
+                            android:id="@+id/internship_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/appliedHiredBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/assessment_answers_bg"
+                    android:fontFamily="@font/rubik_medium"
+                    android:gravity="center"
+                    android:padding="7dp"
+                    android:textColor="@color/red"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="10dp"
+                android:background="#A4A4A4" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/rubik"
+                android:text="Responsibilities"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <ListView
+                android:id="@+id/listView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="10dip"
+                android:layout_marginEnd="20dp"
+                android:divider="@android:color/white"
+                tools:ignore="NestedScrolling" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/rubik"
+                android:text="Who can apply?"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <ListView
+                android:id="@+id/listView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="10dip"
+                android:layout_marginEnd="20dp"
+                android:divider="@android:color/white"
+                tools:ignore="NestedScrolling" />
+
+            <TextView
+                android:id="@+id/womenJoin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/rubik_medium"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="@font/rubik"
+                android:text="Perks"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/perksTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="21dp"
+                android:layout_marginEnd="21dp"
+                android:fontFamily="@font/rubik"
+                android:textSize="14sp"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#A4A4A4" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="vertical"
+                android:paddingBottom="40dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/rubik"
+                    android:text="Your Answers"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/rubik"
+                    android:text="@string/why_do_you_want_to_be_hired"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/answer1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/applied_internship_answers_bg"
+                    android:fontFamily="@font/rubik"
+                    android:gravity="top"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:padding="8dp"
+                    android:paddingBottom="20dp"
+                    android:textColor="#7D7D7D"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/rubik"
+                    android:text="Are you available for"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/answer2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/applied_internship_answers_bg"
+                    android:fontFamily="@font/rubik"
+                    android:gravity="top"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:padding="8dp"
+                    android:paddingBottom="20dp"
+                    android:textColor="#7D7D7D"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/rubik"
+                    android:text="What skills are you well versed with for this internship?"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/answer3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/applied_internship_answers_bg"
+                    android:fadingEdge="none"
+                    android:fontFamily="@font/rubik"
+                    android:gravity="top"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:padding="8dp"
+                    android:paddingBottom="20dp"
+                    android:textColor="#7D7D7D"
+                    android:textSize="13sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/offerLetter"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:fontFamily="@font/rubik_medium"
+                    android:visibility="gone"
+                    android:layout_marginTop="30dp"
+                    android:text="Download Offer Letter"
+                    android:textColor="#00C100"
+                    android:textSize="12sp"
+                    app:rippleColor="#E5F8E0"
+                    app:strokeColor="#8BC784" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbarMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:elevation="0dp"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:contentInsetStart="0dp"
+            app:menu="@menu/toolbar_menu"
+            app:navigationIcon="@drawable/back_internship_details"
+            app:title="Internship Application"
+            app:titleTextColor="#5A5A5A" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/internshipAssessmentScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/q1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:fontFamily="@font/rubik"
+                android:text="@string/why_do_you_want_to_be_hired"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/inputEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/assessment_answers_bg"
+                android:fontFamily="@font/rubik"
+                android:gravity="top"
+                android:hint="@string/skills_in_past"
+                android:inputType="textMultiLine|textCapSentences"
+                android:padding="8dp"
+                android:paddingBottom="20dp"
+                android:textColor="#7D7D7D"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/q1" />
+
+
+            <TextView
+                android:id="@+id/q2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/rubik"
+                android:text="Are you available for"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inputEt" />
+
+            <EditText
+                android:id="@+id/inputEt2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/assessment_answers_bg"
+                android:fontFamily="@font/rubik"
+                android:gravity="top"
+                android:hint="@string/internshipdurationanswer"
+                android:inputType="textMultiLine|textCapSentences"
+                android:padding="8dp"
+                android:paddingBottom="20dp"
+                android:textColor="#7D7D7D"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/q2" />
+
+            <TextView
+                android:id="@+id/q3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/rubik"
+                android:text="What skills are you well versed with for this internship?"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inputEt2" />
+
+            <EditText
+                android:id="@+id/inputEt3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/assessment_answers_bg"
+                android:fadingEdge="none"
+                android:fontFamily="@font/rubik"
+                android:gravity="top"
+                android:hint="@string/mention_your_skills"
+                android:inputType="textMultiLine|textCapSentences"
+                android:padding="8dp"
+                android:paddingBottom="20dp"
+                android:textColor="#7D7D7D"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/q3" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_weight="2"
+                android:fontFamily="@font/rubik_medium"
+                android:text="Submit"
+                app:backgroundTint="#1012B3"
+                app:cornerRadius="7dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inputEt3"
+                app:rippleColor="#C7C8FD" />
+
+            <TextView
+                android:id="@+id/appliedForThisInternship"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/rubik"
+                android:gravity="center"
+                android:text="You've applied for this Internship. You will soon get a notification from us."
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/submit" />
+
+            <!--    <EditText-->
+            <!--        android:id="@+id/editTextTextMultiLine"-->
+            <!--        android:layout_width="wrap_content"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:ems="10"-->
+            <!--        android:gravity="start|top"-->
+            <!--        android:inputType="textMultiLine"-->
+            <!--        tools:layout_editor_absoluteX="108dp"-->
+            <!--        tools:layout_editor_absoluteY="484dp" />-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ABA8B0</color>
+<!--    <color name="colorPrimary">#6200EE</color>-->
+    <color name="colorPrimaryDark">#9E9E9E</color>
+<!--    <color name="colorPrimaryDark">#0396DA</color>-->
+    <color name="colorAccent">#05AC9B</color>
+    <!-- Import these colors-->
+    <color name="white">#ffffff</color>
+    <color name="saffron">#ff9933</color>
+    <color name="green">#008900</color>
+    <color name="grey">#C0C0C0</color>
+    <color name="backgroundlogo">#EC7A57</color>
+    <color name="blue">#67B3BD</color>
+    <color name="cream">#E6E99B95</color>
+    <color name="grey3">#424242</color>
+    <color name="cream2">#EEC993</color>
+    <color name="red">#EA3F3F</color>
+    <color name="ff">#FDD59A</color>
+    <color name="disabledBtnBg">#999999</color>
+    <color name="lightGray">#F2F2F2</color>
+    <color name="greenB">#028E08</color>
+    <color name="lightBlue">#E6F2FA</color>
+</resources>

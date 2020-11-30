@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F9FA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp">
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_marginStart="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize"
+                android:src="@drawable/back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="#1012B3" />
+
+<!--            <ImageView-->
+<!--                android:id="@+id/backBtn"-->
+<!--                android:layout_width="40dp"-->
+<!--                android:layout_height="60dp"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:src="@drawable/back"-->
+<!--                app:tint="#59AAF1" />-->
+
+            <LinearLayout
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="Kindly Fill These Details"
+                    android:textColor="#1012B3"
+                    android:textSize="23sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:text="You'll need to have UPI installed on your device."
+                    android:textColor="#757575"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:paddingBottom="30dp">
+
+            <!--            <TextView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginBottom="3dp"-->
+            <!--                android:text="Kindly Fill These Details"-->
+            <!--                android:textColor="#1012B3"-->
+            <!--                android:textSize="20sp" />-->
+
+            <!--            <TextView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginBottom="30dp"-->
+            <!--                android:text="You'll need to have UPI installed on your device."-->
+            <!--                android:textColor="#757575"-->
+            <!--                android:textSize="12sp" />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Name"
+                    android:textColor="#6465DA" />
+
+                <EditText
+                    android:id="@+id/edtname"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/et_style2"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:singleLine="true"
+                    android:textColor="#545454"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="UPI ID"
+                    android:textColor="#6465DA" />
+
+                <EditText
+                    android:id="@+id/edtupiid"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/et_style2"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:singleLine="true"
+                    android:textColor="#545454"
+                    android:textSize="16sp" />
+
+                <!--            <EditText-->
+                <!--                android:id="@+id/inputEt"-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_marginTop="10dp"-->
+                <!--                android:fontFamily="@font/rubik"-->
+                <!--                android:hint="@string/skills_in_past"-->
+                <!--                android:inputType="textMultiLine|textCapSentences"-->
+                <!--                android:paddingBottom="20dp"-->
+                <!--                android:padding="8dp"-->
+                <!--                android:background="@drawable/assessment_answers_bg"-->
+                <!--                android:textColor="#7D7D7D"-->
+                <!--                android:textSize="14sp"/>-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Transaction ID (optional)"
+                    android:textColor="#6465DA" />
+
+                <EditText
+                    android:id="@+id/edttnid"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/et_style2"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:singleLine="true"
+                    android:textColor="#545454"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Reference ID (optional)"
+                    android:textColor="#6465DA" />
+
+                <EditText
+                    android:id="@+id/edtrefid"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/et_style2"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:singleLine="true"
+                    android:textColor="#545454"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Message (optional)"
+                    android:textColor="#6465DA" />
+
+
+                <EditText
+                    android:id="@+id/edtmsg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/et_style2"
+                    android:gravity="top"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="30dp"
+                    android:singleLine="true"
+                    android:textColor="#545454"
+                    android:textSize="16sp"/>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnpay"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:textAllCaps="true"
+                    android:textColor="#1012B3"
+                    android:textSize="12sp"
+                    app:cornerRadius="10dp"
+                    app:rippleColor="#C4C5FF"
+                    app:strokeColor="#1012B3" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cancelPay"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="Cancel payment"
+                    android:textAllCaps="true"
+                    android:textColor="#B31023"
+                    android:textSize="12sp"
+                    app:cornerRadius="10dp"
+                    app:rippleColor="#FFC4E2"
+                    app:strokeColor="#B31036" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

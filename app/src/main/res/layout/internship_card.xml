@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/internship_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/internship_img_view"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/internship_details_bg"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/internship_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_medium"
+                android:maxLines="1"
+                android:text="Internship"
+                android:textColor="#3F3F3F"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/internship_org"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik"
+                android:maxLines="1"
+                android:text="Internship Org"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/extraInternshipDetails"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="1dp"
+                android:src="@drawable/office_logo"
+                app:tint="#959595" />
+
+            <TextView
+                android:id="@+id/internshipTypeDetails"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:layout_weight="4"
+                android:gravity="center_vertical"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="3dp"
+                android:src="@drawable/rupee_logo"
+                app:tint="#959595" />
+
+            <TextView
+                android:id="@+id/internshipStipendDetails"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:gravity="center_vertical"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="3dp"
+                android:src="@drawable/hourglass_logo"
+                app:tint="#959595" />
+
+            <TextView
+                android:id="@+id/internshipDurationDetails"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:gravity="center_vertical"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:layout_marginTop="10dp"
+        android:background="#C5C5C5" />
+
+</LinearLayout><!--<com.google.android.material.card.MaterialCardView-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="10dp"-->
+    <!--app:cardBackgroundColor="@android:color/white"-->
+    <!--app:cardCornerRadius="10dp"-->
+    <!--app:cardElevation="3dp"-->
+    <!--app:cardForegroundColor="@android:color/transparent">-->
+
+    <!--<LinearLayout-->
+    <!--    android:id="@+id/internship_layout"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:layout_margin="7dp"-->
+    <!--    android:padding="5dp">-->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/internship_img_view"-->
+    <!--        android:layout_width="60dp"-->
+    <!--        android:layout_height="60dp"-->
+    <!--        android:background="@drawable/internship_details_bg"-->
+    <!--        android:scaleType="centerCrop" />-->
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_marginStart="20dp"-->
+    <!--        android:orientation="vertical">-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/internship_name"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:maxLines="1"-->
+    <!--            android:fontFamily="@font/rubik_medium"-->
+    <!--            android:text="Internship"-->
+    <!--            android:textSize="17sp" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/internship_org"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:fontFamily="@font/rubik"-->
+    <!--            android:maxLines="1"-->
+    <!--            android:textSize="14sp"-->
+    <!--            android:text="Internship Org" />-->
+
+    <!--    </LinearLayout>-->
+    <!--</LinearLayout>-->
+    <!--</com.google.android.material.card.MaterialCardView>-->

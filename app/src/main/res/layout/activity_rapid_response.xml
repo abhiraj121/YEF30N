@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rapidResponseLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="@drawable/gradientbackground">
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="#1012B3" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/yef_logo_transparent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/rubik"
+                android:text="Name of the beneficiary"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <EditText
+                android:id="@+id/benName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:autofillHints=""
+                android:background="@drawable/assessment_answers_bg"
+                android:fontFamily="@font/rubik"
+                android:gravity="top"
+                android:inputType="textCapWords"
+                android:maxLines="1"
+                android:paddingStart="10dp"
+                android:paddingTop="13dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="13dp"
+                android:textColor="#7D7D7D"
+                android:textSize="13sp"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/rubik"
+                android:text="Contact No of the beneficiary"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/name" />
+
+            <EditText
+                android:id="@+id/benContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:autofillHints=""
+                android:background="@drawable/assessment_answers_bg"
+                android:fontFamily="@font/rubik"
+                android:gravity="top"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:paddingStart="10dp"
+                android:paddingTop="13dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="13dp"
+                android:textColor="#7D7D7D"
+                android:textSize="13sp"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/rubik"
+                android:text="Current Address of the beneficiary"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/number" />
+
+            <EditText
+                android:id="@+id/benAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:autofillHints=""
+                android:background="@drawable/assessment_answers_bg"
+                android:fontFamily="@font/rubik"
+                android:gravity="top"
+                android:inputType="textMultiLine|textCapSentences"
+                android:paddingStart="10dp"
+                android:paddingTop="13dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="13dp"
+                android:textColor="#7D7D7D"
+                android:textSize="13sp"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/rubik"
+                android:text="AadharCard or Any government ID copy of the beneficiary"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/address" />
+
+            <EditText
+                android:id="@+id/benID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:autofillHints=""
+                android:background="@drawable/assessment_answers_bg"
+                android:fontFamily="@font/rubik"
+                android:gravity="top"
+                android:inputType="textMultiLine|textCapSentences"
+                android:paddingStart="10dp"
+                android:paddingTop="13dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="13dp"
+                android:textColor="#7D7D7D"
+                android:textSize="13sp"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/do_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/rubik"
+                android:text="What does beneficiary do"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id" />
+
+            <EditText
+                android:id="@+id/benOccupation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:autofillHints=""
+                android:background="@drawable/assessment_answers_bg"
+                android:fontFamily="@font/rubik"
+                android:gravity="top"
+                android:inputType="textMultiLine|textCapSentences"
+                android:paddingStart="10dp"
+                android:paddingTop="13dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="13dp"
+                android:textColor="#7D7D7D"
+                android:textSize="13sp"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/problems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/rubik"
+                android:text="What are the problems faced by beneficiary"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/do_" />
+
+            <EditText
+                android:id="@+id/benProblem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:autofillHints=""
+                android:background="@drawable/assessment_answers_bg"
+                android:fontFamily="@font/rubik"
+                android:gravity="top"
+                android:inputType="textMultiLine|textCapSentences"
+                android:paddingStart="10dp"
+                android:paddingTop="13dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="13dp"
+                android:textColor="#7D7D7D"
+                android:textSize="13sp"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/volunteer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/rubik"
+                android:text="Volunteer details (Name, phone number, Government ID copy)"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/problems" />
+
+            <EditText
+                android:id="@+id/benDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:autofillHints=""
+                android:background="@drawable/assessment_answers_bg"
+                android:fontFamily="@font/rubik"
+                android:gravity="top"
+                android:inputType="textMultiLine|textCapSentences"
+                android:paddingStart="10dp"
+                android:paddingTop="13dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="13dp"
+                android:textColor="#7D7D7D"
+                android:textSize="13sp"
+                tools:ignore="LabelFor" />
+
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/rapid2Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:backgroundTint="#96B70A"
+            android:fontFamily="@font/rubik_medium"
+            android:text="Rapid Response"
+            android:textColor="@android:color/white"
+            app:icon="@drawable/call"
+            app:iconTint="@android:color/white"
+            app:rippleColor="#F2FAD3" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/rubik_medium"
+            android:gravity="center"
+            android:text="This will redirect you to Whatsapp Application"
+            android:textSize="12sp" />
+    </LinearLayout>
+</ScrollView>

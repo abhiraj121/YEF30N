@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              tools:context=".WebinarListActivity"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#FDF2F2"
+               android:orientation="vertical">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp"
+              android:layout_gravity="center_horizontal" android:text="Upcoming Webinars" android:textColor="#021043"
+              android:fontFamily="sans-serif-condensed-medium" android:textSize="22sp"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp"
+              android:text="Click on the webinar to register" android:textAlignment="center"/>
+
+<ListView
+
+        android:id="@+id/list"
+        android:name="com.YEF.yefApp.WebinarList_Fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       android:padding="5dp"
+        android:background="#FDF2F2"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+
+
+        tools:listitem="@layout/fragment_webinar_list_"/>
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.YEF.yefApp">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".home"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ProfileEditActivity" />
+        <activity android:name=".OfferLetter" />
+        <activity android:name=".AppliedInternshipDetails" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".RapidResponse" />
+        <activity android:name=".DonationsActivity2" />
+        <activity android:name=".InternshipDetails" />
+        <activity android:name=".Myprofile" />
+        <activity android:name=".WebinarListActivity" />
+        <activity android:name=".MainActivity2" />
+        <activity android:name=".forgot_password" />
+        <activity android:name=".AssessmentQues" />
+        <activity android:name=".EventsFragment" />
+        <activity android:name=".Gallery" />
+        <activity android:name=".Socialcause" />
+        <activity android:name=".Gallery_image_completeView" />
+        <activity
+            android:name=".NavigationbarActivity"
+            android:label="@string/title_activity_navigationbar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!--
+activity
+            android:name=".NavigationbarActivity"
+            android:label="@string/title_activity_navigationbar"
+            android:theme="@style/AppTheme.NoActionBar" /
+        -->
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

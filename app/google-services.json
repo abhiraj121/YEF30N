@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "519758151697",
+    "firebase_url": "https://fir-teamyef.firebaseio.com",
+    "project_id": "fir-teamyef",
+    "storage_bucket": "fir-teamyef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:519758151697:android:be9072ce0d7e9c48ca71b0",
+        "android_client_info": {
+          "package_name": "com.YEF.yefApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "519758151697-j0cabh08ljb23bhdspkia4hhf7fostlg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.YEF.yefApp",
+            "certificate_hash": "8f5985963bc3d741039d1cbb9a17d4b8093cf4d8"
+          }
+        },
+        {
+          "client_id": "519758151697-8cks55s39m46s25qq094bm8av774t9u1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUX1XAc7SXHfC8JRAPMT0qvBnVGVzPc_E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "519758151697-8cks55s39m46s25qq094bm8av774t9u1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

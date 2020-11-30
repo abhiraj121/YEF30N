@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">YEF India</string>
+    <string name="title_activity_navigationbar">Navigationbar</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="login">Login</string>
+    <string name="aboutus">About Us</string>
+    <string name="aboutfounder">About Our Founder</string>
+    <string name="internship">Internship Opportunity</string>
+    <string name="donation">Donation</string>
+    <string name="locateus">Locate Us</string>
+    <string name="yef">" Y E F"</string>
+    <string name="YEF2">" Youth Empowerment Foundation"</string>
+    <string name="yef3">" Y E F"</string>
+    <string name="login2">Login/Register</string>
+    <string name="contactus">Contact Us</string>
+    <string name="yefr4">" Y E F"</string>
+    <string name="YEF5">" Y E F"</string>
+
+    <string name="why_do_you_want_to_be_hired">Why do you want to be hired for this internship?</string>
+    <string name="skills_in_past">Mention in detail what relevant skills or past experience you have for this internship</string>
+    <string name="mention_your_skills">Mention your skills</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="don_t_have_an_account_sign_up">
+        <u>Don\'t have an account?SIGN UP</u>
+    </string>
+    <string name="already_have_an_account_login">
+        Already have an Account? <u><b>LogIn</b></u>
+    </string>
+
+    <string name="sign_up">
+        <u>Create One</u>
+    </string>
+    <string name="location">59, Masoodpur Dairy Vasantkunj \nNew Delhi-70</string>
+
+    <string name="about_us_data">Youth Empowerment Foundation is a non-profit organisation in New Delhi. Our dream
+        sparkled in 2015 as we started working on social welfare initiatives empowering youth and children. Preparing
+        youths for the future so that they can be a plorific holder of the victory is one of our sole target which we
+        aim to achieve.\n
+
+        YEF was founded in June 2017 by Mr. Rambabu Sharma. Inspired by his own life journey, the founder along with his
+        team has laid a strong foundation to educate the underprivileged children of the society and hence bridge the
+        gap between them and the world.\n
+
+        We are creating smiles on everyone\'s faces by spreading education thought our team of youths in every village
+        and slum of India. We are working day and night to accomplish this dream and one day we believe our dream to see
+        an educated India will be accomplished with a winning jersey.\n
+
+        Upliftment of underprivileged and empowerment of youth is our prime target which we are working on and the
+        foremost important thing thought which a key if balance and knowledge will be established around our society.
+        Along with education we also try to enhance other creative skills among childrens in a healthy manner so that
+        they can be among the strongest pillars of the society. Together we can create a better tomorrow.
+    </string>
+    <string name="about_founder">
+        The founder Mr Rambabu Sharma saw this dream of accomplishing smiles through education which was inspired by his
+        own journey. He belonged to a remote village in Bihar and his life went through many ups and downs. To support
+        the financial condition of his family he decided to work as a child laborer in factories of Kirti Nagar, New
+        Delhi.\n
+        Life was too harsh for him to manage at that time but somehow he completed his studies and achieved an
+        Engineering degree from Guru Gobind Sing Indraprastha University, New Delhi where he was awarded with
+        scholarship to pursue his education further.\n
+
+        Currently he is an Engineer in a German MNC where he is working with the cutting-edge technology of Power
+        Generation globally. He had the opportunity to travel to Germany and other countries because of his job but he
+        had committed to serving underprivileged children to help them pursue their education.He is still connected to
+        his roots today and works for betterment and upliftment of needy ones.\n
+
+        He not only funds his total salary to the Foundation but also spend quality time with the Foundation team and
+        community leaders to guide them in achieving the objectives for the foundation of his organisation.\n
+
+        He inspires students connected with his initiative and he considers the society as his family and he works
+        persistently towards its upliftment.\n
+
+    </string>
+    <string name="internshipdurationanswer">Please mention how many hours a day you can contribute to this work</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+</resources>

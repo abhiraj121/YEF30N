@@ -66,11 +66,13 @@
             android:paddingLeft="25dp">
 
             <ImageView
+                android:id="@+id/locateIcon"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:src="@drawable/google_maps" />
 
             <TextView
+                android:id="@+id/locateTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"

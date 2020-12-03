@@ -2,6 +2,8 @@
 
     <!-- Base application theme. -->
 
+    <!--    <style name="MyTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar"-->
+
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
 
         <!-- Customize your theme here. -->
@@ -12,6 +14,10 @@
 
         <item name="colorAccent">@color/colorAccent</item>
 
+        <!--        <item name="statusBarBackground">#DFDFDF</item>-->
+
+        <item name="android:statusBarColor">#9B9B9B</item>
+        <!--        <item name="android:windowDrawsSystemBarBackgrounds">true</item>-->
     </style>
 
 
@@ -71,26 +77,26 @@
         <item name="DialogSpotCount">4</item>
     </style>
 
-<!--    <style name="AppTheme.ToolbarFont" parent="Widget.AppCompat.Toolbar">-->
-<!--        &lt;!&ndash;This line changes the color of text in Toolbar&ndash;&gt;-->
-<!--        <item name="android:textColorPrimary">@color/backgroundlogo</item>-->
-<!--        &lt;!&ndash;This line changes the color of icons in toolbar (back, overflow menu icons)&ndash;&gt;-->
-<!--        <item name="android:textColorSecondary">@android:color/holo_green_dark</item>-->
-<!--        <item name="textAllCaps">false</item>-->
-<!--        <item name="android:textSize">30sp</item>-->
-<!--        <item name="android:fontFamily">@font/rubik_medium</item>-->
-<!--    </style>-->
+    <!--    <style name="AppTheme.ToolbarFont" parent="Widget.AppCompat.Toolbar">-->
+    <!--        &lt;!&ndash;This line changes the color of text in Toolbar&ndash;&gt;-->
+    <!--        <item name="android:textColorPrimary">@color/backgroundlogo</item>-->
+    <!--        &lt;!&ndash;This line changes the color of icons in toolbar (back, overflow menu icons)&ndash;&gt;-->
+    <!--        <item name="android:textColorSecondary">@android:color/holo_green_dark</item>-->
+    <!--        <item name="textAllCaps">false</item>-->
+    <!--        <item name="android:textSize">30sp</item>-->
+    <!--        <item name="android:fontFamily">@font/rubik_medium</item>-->
+    <!--    </style>-->
 
-<!--    <style name="Widget.Shrine.Toolbar" parent="Widget.AppCompat.Toolbar">-->
-<!--        <item name="android:background">?attr/colorAccent</item>-->
-<!--        <item name="android:theme">@style/Theme.Shrine</item>-->
-<!--        &lt;!&ndash;        <item name="android:theme">?theme</item>&ndash;&gt;-->
-<!--        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>-->
-<!--        <item name="titleTextAppearance">@style/TextAppearance.Shrine.Toolbar</item>-->
-<!--    </style>-->
-<!--    -->
-<!--    <style name="TextAppearance.Shrine.Toolbar" parent="TextAppearance.MaterialComponents.Button">-->
-<!--        <item name="android:textSize">16sp</item>-->
-<!--    </style>-->
+    <!--    <style name="Widget.Shrine.Toolbar" parent="Widget.AppCompat.Toolbar">-->
+    <!--        <item name="android:background">?attr/colorAccent</item>-->
+    <!--        <item name="android:theme">@style/Theme.Shrine</item>-->
+    <!--        &lt;!&ndash;        <item name="android:theme">?theme</item>&ndash;&gt;-->
+    <!--        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>-->
+    <!--        <item name="titleTextAppearance">@style/TextAppearance.Shrine.Toolbar</item>-->
+    <!--    </style>-->
+    <!--    -->
+    <!--    <style name="TextAppearance.Shrine.Toolbar" parent="TextAppearance.MaterialComponents.Button">-->
+    <!--        <item name="android:textSize">16sp</item>-->
+    <!--    </style>-->
 
 </resources>

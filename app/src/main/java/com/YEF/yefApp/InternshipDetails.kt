@@ -19,6 +19,9 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import dmax.dialog.SpotsDialog
 import kotlinx.android.synthetic.main.activity_internship_details.*
+import kotlinx.android.synthetic.main.fragment_tab2.view.*
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class InternshipDetails : AppCompatActivity() {
 
@@ -44,11 +47,9 @@ class InternshipDetails : AppCompatActivity() {
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
             internshipDetailsScrollView.setOnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
-
                 if (toolbarMain == null) {
-                    return@setOnScrollChangeListener;
+                    return@setOnScrollChangeListener
                 }
-
                 if (!internshipDetailsScrollView.canScrollVertically(-1)) {
                     // we have reached the top of the list
                     toolbarMain.elevation = 0f
@@ -56,7 +57,6 @@ class InternshipDetails : AppCompatActivity() {
                     // we are not at the top yet
                     toolbarMain.elevation = 10f
                 }
-
             }
         }
 
@@ -71,9 +71,19 @@ class InternshipDetails : AppCompatActivity() {
                 sk.setTextColor((Color.parseColor("#4D4D4D")))
                 sk.show()
             } else {
-                val i = Intent(this, AssessmentQues::class.java)
-                i.putExtra("id", internshipID)
-                startActivity(i)
+                if (GlobalScope.launch {
+                            checkProfileAvailable()
+                        }.isCompleted) {
+                    val i = Intent(this, AssessmentQues::class.java)
+                    i.putExtra("id", internshipID)
+                    startActivity(i)
+                } else {
+                    val sk = Snackbar.make(internshipDetailsLayout, "Please complete your profile before applying", Snackbar.LENGTH_SHORT)
+                    sk.animationMode = Snackbar.ANIMATION_MODE_SLIDE
+                    sk.setBackgroundTint(Color.parseColor("#ECEDFF"))
+                    sk.setTextColor((Color.parseColor("#4D4D4D")))
+                    sk.show()
+                }
             }
         }
 
@@ -90,6 +100,38 @@ class InternshipDetails : AppCompatActivity() {
         dialog?.show()
 
 
+    }
+
+    private fun checkProfileAvailable(): Boolean {
+        val userMail = FirebaseAuth.getInstance().currentUser!!.email!!
+        var cgpa = ""
+        var name = ""
+        var end = ""
+        var subjects = ""
+        var board = ""
+        db.collection("users")
+                .document(userMail)
+                .collection("educationDetails")
+                .document("SecSchool")
+                .get()
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        if (task.result?.data?.isNotEmpty() == true) {
+                            Log.d(TAG, task.result!!.data.toString())
+                            cgpa = task.result!!.data!!["cgpa"].toString()
+                            name = task.result!!.data!!["schoolName"].toString()
+                            end = task.result!!.data!!["endYear"].toString()
+                            subjects = task.result!!.data!!["subjects"].toString()
+                            board = task.result!!.data!!["board"].toString()
+                        }
+                    } else {
+                        Log.w(TAG, "Error getting documents.", task.exception)
+                    }
+                }
+                .addOnFailureListener {
+                    Log.d(TAG, it.message.toString())
+                }
+        return !(cgpa == "" || name == "" || end == "" || subjects == "" || board == "")
     }
 
     private fun getInternshipDetailsFromFirebase() {

@@ -1,21 +1,16 @@
 package com.YEF.yefApp
 
 import android.content.Intent
-import android.graphics.Color
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
-import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_donations_activty.view.*
-import kotlinx.android.synthetic.main.fragment_tab1.view.*
 
 class DonationsFragment : Fragment() {
 
@@ -29,27 +24,38 @@ class DonationsFragment : Fragment() {
 
         setUserDetailsTop(view)
 
-        view.next_button.setOnClickListener {
-            if (view.amountTv.text.isNotEmpty()) {
-                if (view.amountTv.text.toString().toInt() > 5) {
-                    val i = Intent(requireContext(), DonationsActivity2::class.java)
-                    i.putExtra("amount", view.amountTv.text.toString())
-                    startActivity(i)
-                }else{
-                    val sk = Snackbar.make(view.donationsFragmentLayout,"Please select an amount more than 5", Snackbar.LENGTH_SHORT)
-                    sk.animationMode = Snackbar.ANIMATION_MODE_SLIDE
-                    sk.setBackgroundTint(Color.parseColor("#ECEDFF"))
-                    sk.setTextColor((Color.parseColor("#4D4D4D")))
-                    sk.show()
-                }
-            }else{
-                val sk = Snackbar.make(view.donationsFragmentLayout,"Please select an amount", Snackbar.LENGTH_SHORT)
-                sk.animationMode = Snackbar.ANIMATION_MODE_SLIDE
-                sk.setBackgroundTint(Color.parseColor("#ECEDFF"))
-                sk.setTextColor((Color.parseColor("#4D4D4D")))
-                sk.show()
-            }
+        view.workersDonateBtn.setOnClickListener {
+            val link = "https://pages.razorpay.com/DailyWageWorkers"
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(link))
+            requireContext().startActivity(browserIntent)
         }
+
+        view.sanitaryDonateBtn.setOnClickListener {
+            requireContext().startActivity(Intent(requireContext(), DonationsActivity2::class.java))
+        }
+
+
+//        view.next_button.setOnClickListener {
+//            if (view.amountTv.text.isNotEmpty()) {
+//                if (view.amountTv.text.toString().toInt() > 5) {
+//                    val i = Intent(requireContext(), DonationsActivity2::class.java)
+//                    i.putExtra("amount", view.amountTv.text.toString())
+//                    startActivity(i)
+//                }else{
+//                    val sk = Snackbar.make(view.donationsFragmentLayout,"Please select an amount more than 5", Snackbar.LENGTH_SHORT)
+//                    sk.animationMode = Snackbar.ANIMATION_MODE_SLIDE
+//                    sk.setBackgroundTint(Color.parseColor("#ECEDFF"))
+//                    sk.setTextColor((Color.parseColor("#4D4D4D")))
+//                    sk.show()
+//                }
+//            }else{
+//                val sk = Snackbar.make(view.donationsFragmentLayout,"Please select an amount", Snackbar.LENGTH_SHORT)
+//                sk.animationMode = Snackbar.ANIMATION_MODE_SLIDE
+//                sk.setBackgroundTint(Color.parseColor("#ECEDFF"))
+//                sk.setTextColor((Color.parseColor("#4D4D4D")))
+//                sk.show()
+//            }
+//        }
 
         return view
     }
@@ -72,7 +78,7 @@ class DonationsFragment : Fragment() {
                         val mail = task.result!!.data!!["Email Address"].toString()
                         val number = task.result!!.data!!["Mobile Number"].toString()
 //                        val city = task.result!!.data!!["city"].toString()
-                        val finalNumber = number.substring(3,13)
+                        val finalNumber = number.substring(3, 13)
 
                         view.currentUsername.text = name
                         view.currentMobile.text = finalNumber
@@ -84,7 +90,7 @@ class DonationsFragment : Fragment() {
                     }
                 }
                 .addOnFailureListener {
-                    Log.d(TAG, "Reached onFailure "+it.message.toString())
+                    Log.d(TAG, "Reached onFailure " + it.message.toString())
                 }
 
 

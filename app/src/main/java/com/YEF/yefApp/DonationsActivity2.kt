@@ -21,31 +21,44 @@ class DonationsActivity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_donations2)
 
-        amt = intent.getStringExtra("amount")!!
-        val toDisplayInPay = "pay ₹$amt"
-        btnpay.text = toDisplayInPay
+//        amt = intent.getStringExtra("amount")!!
+//        val toDisplayInPay = "pay ₹$amt"
+//        btnpay.text = toDisplayInPay
+//
 
+
+        rzePayBtn1.setOnClickListener {
+            val link = "https://rzp.io/l/donateapad"
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(link))
+            startActivity(browserIntent)
+        }
+
+        rzePayBtn2.setOnClickListener {
+            val link = "https://milaap.org/fundraisers/support-yef-india-6"
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(link))
+            startActivity(browserIntent)
+        }
 
         backBtn.setOnClickListener {
             finish()
         }
 
-        cancelPay.setOnClickListener {
-            finish()
-        }
+//        cancelPay.setOnClickListener {
+//            finish()
+//        }
 
-        paybtn = findViewById(R.id.btnpay)
-        paybtn!!.setOnClickListener {
-            val name = edtname!!.text.toString()
-            val upiId = edtupiid!!.text.toString()
-//            val amt = amttxt!!.text.toString()
-            val msg = edtmsg!!.text.toString()
-            val tnid = edttnid!!.text.toString()
-            val refId = edtrefid!!.text.toString()
-            if (name.isEmpty() || upiId.isEmpty()) {
-                Toast.makeText(this, "Name and Upi Id is necessary", Toast.LENGTH_SHORT).show()
-            } else payUsingUpi(name, upiId, amt, msg, tnid, refId)
-        }
+//        paybtn = findViewById(R.id.btnpay)
+//        paybtn!!.setOnClickListener {
+//            val name = edtname!!.text.toString()
+//            val upiId = edtupiid!!.text.toString()
+////            val amt = amttxt!!.text.toString()
+//            val msg = edtmsg!!.text.toString()
+//            val tnid = edttnid!!.text.toString()
+//            val refId = edtrefid!!.text.toString()
+//            if (name.isEmpty() || upiId.isEmpty()) {
+//                Toast.makeText(this, "Name and Upi Id is necessary", Toast.LENGTH_SHORT).show()
+//            } else payUsingUpi(name, upiId, amt, msg, tnid, refId)
+//        }
 
     }
 

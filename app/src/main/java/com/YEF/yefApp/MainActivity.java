@@ -171,16 +171,15 @@ public class MainActivity extends AppCompatActivity {
                             break;
                         case R.id.nav_donation:
 //                            temp.setVisibility(View.GONE);
-                            String link = "https://pages.razorpay.com/DailyWageWorkers";
-//                            String link = "https://pages.razorpay.com/pl_EpJyCZ6weWUoJq/view";
-                            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
-                            startActivity(browserIntent);
-//                            FragmentManager fm6 = getSupportFragmentManager();
-//                            FragmentTransaction ft6 = fm6.beginTransaction();
-//                            DonationsFragment l6 = new DonationsFragment();
-//                            ft6.replace(R.id.ma, l6);
-//                            ft6.addToBackStack(null);
-//                            ft6.commit();
+//                            String link = "https://pages.razorpay.com/DailyWageWorkers";
+//                            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
+//                            startActivity(browserIntent);
+                            FragmentManager fm6 = getSupportFragmentManager();
+                            FragmentTransaction ft6 = fm6.beginTransaction();
+                            DonationsFragment l6 = new DonationsFragment();
+                            ft6.replace(R.id.ma, l6);
+                            ft6.addToBackStack(null);
+                            ft6.commit();
                             drawer.closeDrawer(Gravity.LEFT);
                             break;
                         case R.id.nav_contactus:
@@ -197,10 +196,7 @@ public class MainActivity extends AppCompatActivity {
                             float latitude = 28.688768f;
                             float longitude = 77.1303528f;
                             String strUri = "http://maps.google.com/maps?q=loc:" + latitude + "," + longitude;
-//                            String strUri = "http://maps.google.com/maps?q=loc:" + latitude + "," + longitude + "(" + "YEF" + ")";
-                            Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(
-                                    strUri
-                            ));
+                            Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(strUri));
                             i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // Only if initiating from a Broadcast Receiver
                             String mapsPackageName = "com.google.android.apps.maps";
                             if (isPackageExisted(getApplicationContext(), mapsPackageName)) {

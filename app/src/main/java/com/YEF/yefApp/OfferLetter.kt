@@ -1,7 +1,9 @@
 package com.YEF.yefApp
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_offer_letter.*
 
 class OfferLetter : AppCompatActivity() {
@@ -14,5 +16,10 @@ class OfferLetter : AppCompatActivity() {
         }
 
 
+        getOfferLetterBtn.setOnClickListener {
+            val link = "https://www.google.com/"
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(link))
+            startActivity(browserIntent)
+        }
     }
 }

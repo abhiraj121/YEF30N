@@ -12,7 +12,6 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import dmax.dialog.SpotsDialog
 import kotlinx.android.synthetic.main.assessment_ques.*
-import kotlinx.android.synthetic.main.assessment_ques.app_bar
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.HashMap
@@ -43,7 +42,7 @@ class AssessmentQues : AppCompatActivity() {
             internshipAssessmentScrollView.setOnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
 
                 if (toolbarMain == null) {
-                    return@setOnScrollChangeListener;
+                    return@setOnScrollChangeListener
                 }
 
                 if (!internshipAssessmentScrollView.canScrollVertically(-1)) {
@@ -154,7 +153,14 @@ class AssessmentQues : AppCompatActivity() {
         user["hired"] = "false"
         user["offerLetter"] = "false"
         val timeStamp: String = SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().time)
-        user["appliedDate"] = timeStamp
+        val newDate = timeStamp.subSequence(0, 4).toString() +
+                "/" + timeStamp.subSequence(4, 6).toString() +
+                "/" + timeStamp.subSequence(6, 8).toString()
+        val newTime = timeStamp.subSequence(9, 11).toString() +
+                ":" + timeStamp.subSequence(11, 13).toString() +
+                ":" + timeStamp.subSequence(13, 15).toString()
+        user["appliedDate"] = newDate
+        user["appliedTime"] = newTime
         user["studentPhone"] = if (FirebaseAuth.getInstance().currentUser?.phoneNumber != null) {
             FirebaseAuth.getInstance().currentUser!!.phoneNumber!!
         } else {

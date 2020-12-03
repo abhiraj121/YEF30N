@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#ABA8B0</color>
 <!--    <color name="colorPrimary">#6200EE</color>-->
-    <color name="colorPrimaryDark">#9E9E9E</color>
+    <color name="colorPrimaryDark">#E3E3E3</color>
 <!--    <color name="colorPrimaryDark">#0396DA</color>-->
     <color name="colorAccent">#05AC9B</color>
     <!-- Import these colors-->

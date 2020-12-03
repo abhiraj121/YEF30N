@@ -7,10 +7,10 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:focusable="true"
-        android:focusableInTouchMode="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         android:orientation="vertical"
         tools:context=".MainActivity">
 
@@ -148,38 +148,59 @@
                 android:textSize="13sp"
                 tools:ignore="LabelFor" />
 
-            <TextView
-                android:id="@+id/id"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="10dp"
-                android:fontFamily="@font/rubik"
-                android:text="AadharCard or Any government ID copy of the beneficiary"
-                android:textSize="15sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/address" />
+                android:gravity="top">
 
-            <EditText
-                android:id="@+id/benID"
+
+                <TextView
+                    android:id="@+id/id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="100dp"
+                    android:fontFamily="@font/rubik"
+                    android:text="AadharCard or Any government ID copy of the beneficiary"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toStartOf="@+id/attachId1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/attachId1"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#1012B3"
+                    android:text="attach"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/id1Layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
-                android:autofillHints=""
-                android:background="@drawable/assessment_answers_bg"
-                android:fontFamily="@font/rubik"
-                android:gravity="top"
-                android:inputType="textMultiLine|textCapSentences"
-                android:paddingStart="10dp"
-                android:paddingTop="13dp"
-                android:paddingEnd="10dp"
-                android:paddingBottom="13dp"
-                android:textColor="#7D7D7D"
-                android:textSize="13sp"
-                tools:ignore="LabelFor" />
+                android:visibility="gone"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:id="@+id/govId1"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:foreground="@drawable/gov_id_bg"
+                    android:scaleType="centerCrop"
+                    tools:targetApi="m" />
+
+            </androidx.cardview.widget.CardView>
 
             <TextView
                 android:id="@+id/do_"
@@ -254,13 +275,13 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="10dp"
                 android:fontFamily="@font/rubik"
-                android:text="Volunteer details (Name, phone number, Government ID copy)"
+                android:text="Volunteer Name"
                 android:textSize="15sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/problems" />
 
             <EditText
-                android:id="@+id/benDetails"
+                android:id="@+id/volunteerName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -278,6 +299,143 @@
                 android:textColor="#7D7D7D"
                 android:textSize="13sp"
                 tools:ignore="LabelFor" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/rubik"
+                android:text="Volunteer Phone Number"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/problems" />
+
+
+            <EditText
+                android:id="@+id/volunteerNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:autofillHints=""
+                android:background="@drawable/assessment_answers_bg"
+                android:fontFamily="@font/rubik"
+                android:gravity="top"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:paddingStart="10dp"
+                android:paddingTop="13dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="13dp"
+                android:textColor="#7D7D7D"
+                android:textSize="13sp"
+                tools:ignore="LabelFor" />
+
+            <!--            <EditText-->
+            <!--                android:id="@+id/volunteerNumber"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginStart="10dp"-->
+            <!--                android:layout_marginTop="10dp"-->
+            <!--                android:layout_marginEnd="10dp"-->
+            <!--                android:autofillHints=""-->
+            <!--                android:background="@drawable/assessment_answers_bg"-->
+            <!--                android:fontFamily="@font/rubik"-->
+            <!--                android:gravity="top"-->
+            <!--                android:inputType="textMultiLine|textCapSentences"-->
+            <!--                android:paddingStart="10dp"-->
+            <!--                android:paddingTop="13dp"-->
+            <!--                android:paddingEnd="10dp"-->
+            <!--                android:paddingBottom="13dp"-->
+            <!--                android:textColor="#7D7D7D"-->
+            <!--                android:textSize="13sp"-->
+            <!--                tools:ignore="LabelFor" />-->
+
+            <!--            <TextView-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginStart="10dp"-->
+            <!--                android:layout_marginTop="20dp"-->
+            <!--                android:layout_marginEnd="10dp"-->
+            <!--                android:fontFamily="@font/rubik"-->
+            <!--                android:text="Volunteer Government ID (Aadhar) copy"-->
+            <!--                android:textSize="15sp"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@id/problems" />-->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="top">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="100dp"
+                    android:fontFamily="@font/rubik"
+                    android:text="Volunteer Government ID (Aadhar) copy"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toStartOf="@+id/attachId2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/attachId2"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#1012B3"
+                    android:text="attach"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/id2Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:id="@+id/govId2"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:foreground="@drawable/gov_id_bg"
+                    android:scaleType="centerCrop"
+                    tools:targetApi="m" />
+
+            </androidx.cardview.widget.CardView>
+
+            <!--            <EditText-->
+            <!--                android:id="@+id/volunteerGovId"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginStart="10dp"-->
+            <!--                android:layout_marginTop="10dp"-->
+            <!--                android:layout_marginEnd="10dp"-->
+            <!--                android:autofillHints=""-->
+            <!--                android:background="@drawable/assessment_answers_bg"-->
+            <!--                android:fontFamily="@font/rubik"-->
+            <!--                android:gravity="top"-->
+            <!--                android:inputType="textMultiLine|textCapSentences"-->
+            <!--                android:paddingStart="10dp"-->
+            <!--                android:paddingTop="13dp"-->
+            <!--                android:paddingEnd="10dp"-->
+            <!--                android:paddingBottom="13dp"-->
+            <!--                android:textColor="#7D7D7D"-->
+            <!--                android:textSize="13sp"-->
+            <!--                tools:ignore="LabelFor" />-->
 
         </LinearLayout>
 

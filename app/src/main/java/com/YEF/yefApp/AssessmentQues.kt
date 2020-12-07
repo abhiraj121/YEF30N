@@ -25,6 +25,9 @@ class AssessmentQues : AppCompatActivity() {
     private var internshipDuration = ""
     private var internshipId = ""
     private var internshipName = ""
+    val userMail by lazy { FirebaseAuth.getInstance().currentUser!!.email!! }
+
+    //    val userMail = FirebaseAuth.getInstance().currentUser!!.email!!
     private var dialog: AlertDialog? = null
     private var finalInternshipApply = false
 
@@ -33,6 +36,8 @@ class AssessmentQues : AppCompatActivity() {
         setContentView(R.layout.assessment_ques)
 
         setSupportActionBar(app_bar)
+
+        getProfileDataFromFirebase()
 
         app_bar.setNavigationOnClickListener {
             onBackPressed()
@@ -55,6 +60,7 @@ class AssessmentQues : AppCompatActivity() {
 
             }
         }
+
 
 
         mAuth = FirebaseAuth.getInstance()
@@ -143,7 +149,6 @@ class AssessmentQues : AppCompatActivity() {
 
     private fun addInternshipToApplications() {
         val user: MutableMap<String, Any> = HashMap()
-        val userMail = FirebaseAuth.getInstance().currentUser!!.email!!
         val internshipAnswers = arrayListOf<String>()
         internshipAnswers.add(inputEt.text.toString())
         internshipAnswers.add(inputEt2.text.toString())
@@ -174,9 +179,157 @@ class AssessmentQues : AppCompatActivity() {
                 .addOnSuccessListener {
                     Log.d(TAG, "user answers upload successful")
                     dialog!!.dismiss()
-                    makeChangesInLayout()
+                    addProfileDataToApplications()
+//                    makeChangesInLayout()
                 }
                 .addOnFailureListener { e -> Log.w(TAG, "Error adding document", e) }
+    }
+
+    private var secSchoolName = ""
+    private var secSchoolCGPA = ""
+    private var secSchoolEnd = ""
+    private var secSchoolSubjects = ""
+    private var secSchoolBoard = ""
+
+    private var srSecSchoolName = ""
+    private var srSecSchoolCGPA = ""
+    private var srSecSchoolEnd = ""
+    private var srSecSchoolSubjects = ""
+    private var srSecSchoolBoard = ""
+
+    private var collegeName = ""
+    private var collegeCGPA = ""
+    private var collegeCourse = ""
+    private var collegeEnd = ""
+    private var collegeStart = ""
+    private var collegeSpecial = ""
+
+    private fun getProfileDataFromFirebase() {
+        Log.w(TAG, "${FirebaseAuth.getInstance().currentUser?.email} reached")
+        db.collection("users")
+                .document(userMail)
+                .collection("educationDetails")
+                .document("SecSchool")
+                .get()
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        if (task.result?.data?.isNotEmpty() == true) {
+                            secSchoolCGPA = task.result!!.data!!["cgpa"].toString()
+                            secSchoolName = task.result!!.data!!["schoolName"].toString()
+                            secSchoolEnd = task.result!!.data!!["endYear"].toString()
+                            secSchoolSubjects = task.result!!.data!!["subjects"].toString()
+                            secSchoolBoard = task.result!!.data!!["board"].toString()
+                        }
+                    } else {
+                        Log.w(TAG, "Error getting documents.", task.exception)
+                    }
+                }
+                .addOnFailureListener {
+                    Log.d(TAG, it.message.toString())
+                }
+
+        db.collection("users")
+                .document(userMail)
+                .collection("educationDetails")
+                .document("SrSecSchool")
+                .get()
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        if (task.result?.data?.isNotEmpty() == true) {
+                            srSecSchoolCGPA = task.result!!.data!!["cgpa"].toString()
+                            srSecSchoolName = task.result!!.data!!["schoolName"].toString()
+                            srSecSchoolEnd = task.result!!.data!!["endYear"].toString()
+                            srSecSchoolSubjects = task.result!!.data!!["subjects"].toString()
+                            srSecSchoolBoard = task.result!!.data!!["board"].toString()
+                        }
+                    } else {
+                        Log.w(TAG, "Error getting documents.", task.exception)
+                    }
+                }
+                .addOnFailureListener {
+                    Log.d(TAG, it.message.toString())
+                }
+
+        db.collection("users")
+                .document(userMail)
+                .collection("educationDetails")
+                .document("College")
+                .get()
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        if (task.result?.data?.isNotEmpty() == true) {
+                            collegeCGPA = task.result!!.data!!["cgpa"].toString()
+                            collegeName = task.result!!.data!!["collegeName"].toString()
+                            collegeCourse = task.result!!.data!!["course"].toString()
+                            collegeEnd = task.result!!.data!!["endYear"].toString()
+                            collegeSpecial = task.result!!.data!!["speciality"].toString()
+                            collegeStart = task.result!!.data!!["startYear"].toString()
+                        }
+                    } else {
+                        Log.w(TAG, "Error getting documents.", task.exception)
+                    }
+                }
+                .addOnFailureListener {
+                    Log.d(TAG, it.message.toString())
+                }
+    }
+
+    private fun addProfileDataToApplications() {
+        db.collection("applications")
+                .document(internshipName)
+                .collection("studentsApplied")
+                .document(userMail)
+                .collection("educationDetails")
+                .document("secSchool")
+                .set(mapOf(
+                        "cgpa" to secSchoolCGPA,
+                        "schoolName" to secSchoolName,
+                        "endYear" to secSchoolEnd,
+                        "subjects" to secSchoolSubjects,
+                        "board" to secSchoolBoard
+                ))
+                .addOnSuccessListener {
+                    Log.d(TAG, "DocumentSnapshot successfully updated!")
+                }
+                .addOnFailureListener { e -> Log.w(TAG, "Error updating document", e) }
+
+        db.collection("applications")
+                .document(internshipName)
+                .collection("studentsApplied")
+                .document(userMail)
+                .collection("educationDetails")
+                .document("SrSecSchool")
+                .set(mapOf(
+                        "cgpa" to srSecSchoolCGPA,
+                        "schoolName" to srSecSchoolName,
+                        "endYear" to srSecSchoolEnd,
+                        "subjects" to srSecSchoolSubjects,
+                        "board" to srSecSchoolBoard
+                ))
+                .addOnSuccessListener {
+                    Log.d(TAG, "DocumentSnapshot successfully updated!")
+                }
+                .addOnFailureListener { e -> Log.w(TAG, "Error updating document", e) }
+
+        db.collection("applications")
+                .document(internshipName)
+                .collection("studentsApplied")
+                .document(userMail)
+                .collection("educationDetails")
+                .document("College")
+                .set(mapOf(
+                        "cgpa" to collegeCGPA,
+                        "collegeName" to collegeName,
+                        "course" to collegeCourse,
+                        "endYear" to collegeEnd,
+                        "speciality" to collegeSpecial,
+                        "startYear" to collegeStart
+                ))
+                .addOnSuccessListener {
+                    makeChangesInLayout()
+                    Log.d(TAG, "DocumentSnapshot successfully updated!")
+                }
+                .addOnFailureListener { e -> Log.w(TAG, "Error updating document", e) }
     }
 
     private fun makeChangesInLayout() {

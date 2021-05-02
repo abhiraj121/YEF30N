@@ -198,7 +198,6 @@ public class RegisterFragment extends Fragment {
                                                         ad.setButton("OK", new DialogInterface.OnClickListener() {
                                                             @Override
                                                             public void onClick(DialogInterface dialogInterface, int i) {
-
                                                             }
                                                         });
                                                         ad.show();
@@ -270,13 +269,3 @@ public class RegisterFragment extends Fragment {
 
     }
 }
-
-
-
-
-
-
-
-
-
-
